@@ -68,6 +68,7 @@
     background-color: #ffffff;
     border-bottom: 2px dotted #D8D8D8;
     position: relative;
+    background-color: red;
   }
 
   #body-wrap .intro-section {
