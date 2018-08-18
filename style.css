@@ -37,6 +37,10 @@
     font-size: 16px;
     position: relative;
   }
+
+  b {
+    font-family: "montserrat-Regular";
+  }
   
   #header {
     background-color: #24B1FF;
@@ -60,9 +64,10 @@
   }
 
   #body-wrap .section {
-    padding: 48px 35px 44px;
+    padding: 13px 35px 19px;
     background-color: #ffffff;
     border-bottom: 2px dotted #D8D8D8;
+    position: relative;
   }
 
   #body-wrap .intro-section {
@@ -77,7 +82,7 @@
   }
 
   #body-wrap .section p {
-    /* margin-bottom: 6px; */
+    /* margin-bottom: 6px; */ 
   }
 
   #body-wrap .section a {
@@ -121,7 +126,19 @@
     padding-left: 60px;
   }
 
-  #body-wrap #season-select .season-status .in-progress {
+  #body-wrap #season-select .dropdown-menu {
+    width: 224px;
+  }
+
+  #body-wrap #season-select .dropdown-menu .dropdown-item {
+    background-color: #fefefe;
+    color: #BFBFBF;
+    font-family: "Montserrat-Thin";
+    font-size: 20px;
+    border: none;
+  }
+
+  #body-wrap #season-select .season-status .ep-in-progress {
     font-size: 16px;
     font-family: "Montserrat-Regular";
     background-color: #EFD96F;
@@ -129,18 +146,40 @@
     padding: 6px 12px;
     border: none;
     margin-bottom: 11px;
+    display: inline-block;
   }
 
   #body-wrap .section.ep-section p {
     color: #666666;
   }
 
-  #body-wrap .section.ep-section p:first-of-type {
+  #body-wrap .section.ep-section .ep-desc > p:nth-child(2) {
     margin-top: 30px;
+    /* margin-bottom: 4px; */
   }
 
-  #body-wrap .section .ep {
-    display: block;
+  #body-wrap .section.ep-section .ep-top {
+    margin-top: 0;
+    cursor: pointer;
+  }
+
+  #body-wrap .section.ep-section .ep-top p {
+    margin-bottom: 0;
+  }
+
+  #body-wrap .section.ep-section .ep-top[aria-expanded="false"] p {
+    color: #BFBFBF;
+    margin-bottom: 0;
+  }
+
+  #body-wrap .section.ep-section .ep-top[aria-expanded="false"] .ep-status {
+    /* display: none; */
+  }
+
+  #body-wrap .section .ep-number,
+  #body-wrap .section .ep-title,
+  #body-wrap .section .ep-status {
+    /* display: block; */
   }
 
   #body-wrap .section .ep-number {
@@ -162,29 +201,46 @@
     color: #333333;
   }
 
-  #body-wrap .section .ep-status-done {
+  #body-wrap .section.ep-section p.ep-status-done {
     font-family: "Montserrat-Regular";
     font-size: 16px;
     color: #65D890;
     border: 4px solid #65D890;
     padding: 4px 8px;
+    margin-top: 7px;
+    display: inline-block;
   }
 
-  #body-wrap .section .ep-status-done.d-md-inline {
+  #body-wrap .section .ep-top .ep-checkmark {
+    position: absolute;
+    right: -4px;
+    bottom: 8px;
+    color: #65D890;
+  }
+
+  #body-wrap .section .ep-top[aria-expanded="true"] .ep-checkmark {
+    display: none;
+  }
+
+  #body-wrap .section.ep-section .ep-top[aria-expanded="false"] .ep-status-done,
+  #body-wrap .section.ep-section .ep-desc .ep-status-done {
     display: none;
   }
 
   #body-wrap .section .ep-icon {
     max-width: 100%;
     display: block;
-    margin: 0 auto 7px;
-    /* display: none; */
+    margin: 34px auto 37px;
   }
 
   #body-wrap .section .gray-box {
     background-color: #fafafa;
     padding: 37px 40px;
-    margin: 0 -40px;
+    margin: 0 -40px 13px;
+  }
+
+  #body-wrap .ep-section .ep-close span:hover {
+    cursor: pointer;
   }
 
   #body-wrap .section .gray-box button {
@@ -194,6 +250,14 @@
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
     background-color: transparent;
     padding: 22px 31px;
+  }
+
+  #body-wrap .section .readmore {
+    margin-top: -11px;
+  }
+
+  #body-wrap .section .gh-link:hover {
+    cursor: pointer;
   }
 
   #body-wrap .section .gh-link > span {
@@ -211,6 +275,10 @@
   #body-wrap .section .gh-link.text-right {
     margin-right: -25px;
     margin-bottom: 0;
+  }
+
+  #body-wrap .section .video {
+    margin-bottom: 10px;
   }
   
   footer {

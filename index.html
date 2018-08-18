@@ -54,8 +54,7 @@
       <div id="body-wrap">
         <div class="section intro-section">
           <div class="container">
-            <p>We’ve divided our major releases into seasons, just like a tv show. A season has episodes, and each episode represents a development sprint. </p>
-            <p>Check out what each episode entails below, as well as our progress.</p>
+            <p>We’ve divided our major releases into seasons, just like a tv show. Season 1 is Boardwalk V2. It has 8 episodes, and each episode represents a development sprint. Check out what each episode entails below, as well as our progress. When all 8 are done we’ll release Boardwalk V2.</p>
           </div>
         </div>
 
@@ -69,23 +68,28 @@
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                   </button>
                   <div class="dropdown-menu" aria-labelledby="season-btn">
-                    <a class="dropdown-item disabled" href="#">Season 2</a>
-                    <a class="dropdown-item disabled" href="#">Season 3</a>
+                    <span class="dropdown-item disabled">Season 2</span>
+                    <span class="dropdown-item disabled">Season 3</span>
                   </div>
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="season-status">
-                  <button class="in-progress">
+                  <p class="ep-in-progress">
                     In progress
-                  </button>
+                  </p>
                 </div>
               </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</p>
+            <p>Every Episode is a development sprint. Each Episode consists of a set of Epics devs must work through in order to create the functionalities highlighted in the Episode.</p>
+            <p>After each sprint the dev team will show a functioning DApp demo in which the scenario described by the Episode is played out.</p>
+            <p>Once an Episode is completed, devs are free to move on to the ensuing Episode.</p>
             <p class="gh-link"><img src="images/icon_github.png"><span>see <span class="d-none d-md-inline">High Level Roadmap</span> on Github</span></p>
           </div>
         </div>
+
+        <!-- EPISODE SECTION START -->
+
         <div class="section ep-section">
           <div class="container">
             <div class="row">
@@ -93,24 +97,99 @@
                 <img src="images/icon_s01e01.png" class="ep-icon">
               </div>
               <div class="col-md-9">
-                <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" >Toggle both elements</button> -->
-                <p data-toggle="collapse" data-target=".s01e01" aria-expanded="false"><span class="ep ep-number">S01E01</span> <span class="ep ep-title">First Request</span> <span class="ep ep-status-done d-md-inline">Done! <i class="fa fa-check" aria-hidden="true"></i></span></p>
+                <div data-toggle="collapse" data-target=".s01e01" aria-expanded="false" class="ep-top">
+                  <p class="ep-number">S01E01</p> 
+                  <p class="ep-title">First Request</p> 
+                  <p class="ep-status ep-status-done">Done! <i class="fa fa-check" aria-hidden="true"></i></p>
+                  <div class="ep-checkmark"><img src="images/ep-checkmark-green.png"/></div>
+                </div>
                 
-                <div class="collapse s01e01">
-                    <span class="ep ep-status-done d-inline d-md-none">Done! <i class="fa fa-check" aria-hidden="true"></i></span>
-                    <p>In episode 1, Frank is really excited to start using Swarm City. Whenever he gets excited by something, Frank throws himself whole hog into it. And so without delay he creates and posts his first request. Frank would like someone to translate his "Decentralise Now!" manifesto in exchange for 20 SWT. </p>
+                <div class="collapse s01e01 ep-desc">
+                  <p class="ep-status ep-status-done">Done! <i class="fa fa-check" aria-hidden="true"></i></p>
+                  <p>In episode 1, Frank is really excited to start using Swarm City. Whenever he gets excited by something, Frank throws himself whole hog into it. And so without delay he creates and posts his first request. Frank would like someone to translate his "Decentralise Now!" manifesto in exchange for 20 SWT. </p>
 
-                    <p>
+                    <!-- <p>
                       <span class="d-block d-md-inline">
-                        <a class="more" data-toggle="collapse" href="#s01e01-more" role="button" aria-expanded="false" aria-controls="what-answer">
+                        <a class="more" data-toggle="collapse" href="#s01e01-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                         read more</a>
                       </span>
                       <br/>
                       <span class="gh-link d-block d-md-inline">
                         <img src="images/icon_github.png"><span>see S01E01 on Github</span>
                       </span>
+                    </p> -->
+
+                    <div class="collapse ep-more" id="s01e01-more">
+                      <div class="">
+                        <p>He posts this request in the marketplace known as #Settler, because #Settler is a place where early adopters go to do such things.</p>
+      
+                        <p>Frank is on /new-request, filling in the description: "Translate my 1 page manifesto from English to Dutch." and the amount: "20 SWT". Frank sets the request's location to "Worldwide".</p>
+                        
+                        <p>After submitting his request, he sees it on page /hashtag (of #Settler). Frank taps on his item to see the detail. In the detail, he finds and then grabs the shareable link and posts it on Facebook.</p>
+                        
+                        <p>Who, oh who, will respond to Frank's request?</p>
+                      </div>
+    
+                      <div class="video">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
+                          </div>
+                        <!-- https://youtu.be/MMkKu43_cjw -->
+                      </div>
+      
+                      <div class="gray-box">
+                        <p><b>Try for yourself!</b> Visit dev.swarm.city and act out this scenario!</p>
+                        <p class="small">485 people have succesfully acted out this scenario.</p>
+                        <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
+                      </div>
+    
+                    </div> 
+
+                    <p class="readmore">
+                        <a class="more" data-toggle="collapse" href="#s01e01-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
+                        read more</a>
+                        </p>
+                      <p class="gh-link">
+                        <img src="images/icon_github.png"><span>see S01E01 on Github</span>
+                      </p>
+
+                    <p data-toggle="collapse" data-target=".s01e01" aria-expanded="false" class="gh-link text-right ep-close"><span>close episode</span></p>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- EPISODE SECTION END -->
+
+        <!-- EPISODE SECTION START -->
+
+        <div class="section ep-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 collapse s01e02">
+                <img src="images/icon_s01e02.png" class="ep-icon">
+              </div>
+              <div class="col-md-9">
+                <p data-toggle="collapse" data-target=".s01e02" aria-expanded="false" class="mt-0"><span class="ep ep-number">S01E02</span> <span class="ep ep-title">Request Replies</span> <span class="ep ep-status-done d-md-inline">Done! <i class="fa fa-check" aria-hidden="true"></i></span></p>
+                
+                <div class="collapse s01e02">
+                    <span class="ep ep-status-done d-inline d-md-none">Done! <i class="fa fa-check" aria-hidden="true"></i></span>
+                    <p>In episode 1, Frank is really excited to start using Swarm City. Whenever he gets excited by something, Frank throws himself whole hog into it. And so without delay he creates and posts his first request. Frank would like someone to translate his "Decentralise Now!" manifesto in exchange for 20 SWT. </p>
+
+                    <p>
+                      <span class="d-block d-md-inline">
+                        <a class="more" data-toggle="collapse" href="#s01e02-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
+                        read more</a>
+                      </span>
+                      <br/>
+                      <span class="gh-link d-block d-md-inline">
+                        <img src="images/icon_github.png"><span>see S01E02 on Github</span>
+                      </span>
                     </p>
-                    <div class="collapse" id="s01e01-more">
+                    <div class="collapse" id="s01e02-more">
                       <div class="">
                         <p>He posts this request in the marketplace known as #Settler, because #Settler is a place where early adopters go to do such things.</p>
       
@@ -130,10 +209,10 @@
                         <p>485 people have succesfully acted out this scenario.</p>
                         <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                       </div>
-
-                      <p data-toggle="collapse" data-target=".s01e01" aria-expanded="false" class="gh-link text-right"><span>close episode</span></p>
     
                     </div> 
+
+                    <p data-toggle="collapse" data-target=".s01e02" aria-expanded="false" class="gh-link text-right ep-close"><span>close episode</span></p>
                 </div>
                 
               </div>
@@ -141,6 +220,10 @@
             
           </div>
         </div>
+
+        <!-- EPISODE SECTION END -->
+
+
       </div>        
     <!--BODY END-->
     <!--FOOTER START-->
@@ -161,5 +244,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script>   -->
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script> 
 	</body>
 </html>
