@@ -4,7 +4,7 @@
 
 function epCollapse(){
   if ($(".width-tester").css("width") == "768px") {
-    if(!$(".ep-section .collapse.ep-desc" ).hasClass( "show" )){
+    if(!$(".ep-section.done .collapse.ep-desc" ).hasClass( "show" )){
 
       $(".ep-top").attr({
         "data-toggle" : "none"
