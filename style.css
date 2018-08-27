@@ -29,6 +29,10 @@
     src: url(assets/fonts/Montserrat-Bold.ttf) format('truetype');
     font-weight: 700;
   }
+
+  .width-tester {
+    display: none;
+  }
    
   body {
     background-color: #FAFAFA;
@@ -36,27 +40,30 @@
     color: #BFBFBF;
     font-size: 16px;
     position: relative;
+    background-repeat: no-repeat;
   }
 
   b {
-    font-family: "montserrat-Regular";
+    font-family: "montserrat-Bold";
   }
   
   #header {
     background-color: #24B1FF;
-    padding: 65px 35px 28px;
+    padding: 65px 50px 24px;
   }
 
   .logo {
       /* padding: 2px 0 20px 0; */
       margin-bottom: 20px;
+      max-width: 60px;
   }
 
   #header h1 {
       font-size: 42px;
       color: #FAFAFA;
-      font-family: "Montserrat-Bold";
-      line-height: 95%;
+      font-family: "Montserrat-ExtraBold";
+      line-height: 41px;
+      letter-spacing: 1.3px;
   }
   
   #body-wrap {
@@ -64,22 +71,26 @@
   }
 
   #body-wrap .section {
-    padding: 13px 35px 19px;
+    padding: 13px 50px 19px;
     /* padding: 13px 0 19px; */
     background-color: #ffffff;
     border-bottom: 2px dotted #D8D8D8;
     position: relative;
   }
 
+  #body-wrap .section:last-child {
+    border-bottom: none;
+  }
+
   #body-wrap .intro-section {
-    padding: 42px 35px 37px;
+    padding: 42px 50px 25px;
     background-color: #fafafa;
     border-bottom: none;
     font-size: 20px;
-    font-family: "Montserrat-ExtraLight";
+    font-family: "Montserrat-Regular";
     line-height: 26px;
     color: #666666;
-    max-width: 1000px;
+    /* max-width: 1000px; */
   }
 
   #body-wrap .section p {
@@ -100,7 +111,11 @@
   }
 
   #body-wrap #season-select {
-    padding: 48px 35px 35px
+    padding: 48px 50px 35px
+  }
+
+  #body-wrap #season-select .dropdown {
+    margin-right: 27px;
   }
 
   #body-wrap #season-select button#season-btn {
@@ -114,8 +129,9 @@
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    border-radius: 0;
+    border-radius: 2px;
     margin-bottom: 20px;
+    padding: 20px 27px;
   }
 
   #body-wrap #season-select .dropdown-toggle::after {
@@ -125,7 +141,7 @@
 
   #body-wrap #season-select .dropdown-toggle .fa {
     margin-left: 0;
-    padding-left: 60px;
+    padding-left: 46px;
   }
 
   #body-wrap #season-select .dropdown-menu {
@@ -140,28 +156,29 @@
     border: none;
   }
 
-  #body-wrap #season-select .season-status .ep-in-progress {
+  #body-wrap .in-progress {
     font-size: 16px;
     font-family: "Montserrat-Bold";
     background-color: #EFD96F;
-    color: #FAFAFA;
-    padding: 6px 12px;
+    color: #FAFAFA !important;
+    padding: 3px 12px 5px;
     border: none;
     margin-bottom: 11px;
-    display: inline-block;
-  }
+    display: inline-block !important;
+}
 
   #body-wrap .ep-section {
-    font-family: "Montserrat-ExtraLight";
+    font-family: "Montserrat-Light";
   }
 
   #body-wrap .section.ep-section p {
     color: #666666;
+    margin-right: 26px;
   }
 
-  #body-wrap .section.ep-section .ep-desc > p:nth-child(2) {
+  #body-wrap .section.ep-section .ep-desc > p:nth-child(2),
+  #body-wrap .section.ep-section.ep-in-progress .ep-desc > p:first-child {
     margin-top: 30px;
-    /* margin-bottom: 4px; */
   }
 
   #body-wrap .section.ep-section .ep-top {
@@ -178,8 +195,8 @@
     margin-bottom: 0;
   }
 
-  #body-wrap .section.ep-section .ep-top[aria-expanded="false"] .ep-status {
-    /* display: none; */
+  #body-wrap .section.ep-section .ep-top .ep-status {
+    display: none;
   }
 
   #body-wrap .section .ep-number,
@@ -210,8 +227,8 @@
   #body-wrap .section.ep-section p.ep-status-done {
     font-family: "Montserrat-Bold";
     font-size: 16px;
-    color: #65D890;
-    border: 4px solid #65D890;
+    color: #65D890 !important;
+    border: 2px solid #65D890;
     padding: 4px 8px;
     margin-top: 7px;
     display: inline-block;
@@ -219,7 +236,7 @@
 
   #body-wrap .section .ep-top .ep-checkmark {
     position: absolute;
-    right: -4px;
+    left: 327px;
     bottom: 8px;
     color: #65D890;
   }
@@ -228,12 +245,12 @@
     display: none;
   }
 
-  #body-wrap .section.ep-section .ep-top[aria-expanded="false"] .ep-status-done,
+  /* #body-wrap .section.ep-section .ep-top[aria-expanded="false"] .ep-status-done,
   #body-wrap .section.ep-section .ep-desc .ep-status-done {
     display: none;
-  }
+  } */
 
-  #body-wrap .section .ep-icon {
+  #body-wrap .section .ep-icon img {
     max-width: 100%;
     display: block;
     margin: 34px auto 37px;
@@ -241,9 +258,18 @@
 
   #body-wrap .section .gray-box {
     background-color: #fafafa;
-    padding: 37px 40px;
-    /* margin: 0 -40px 13px; */
+    padding: 37px 50px;
     margin-bottom: 13px;
+    width: calc(100% + 100px);
+    margin-left: -50px;
+  }
+
+  #body-wrap .section .gray-box p:first-child {
+    margin-bottom: 4px;
+  }
+
+  #body-wrap .section .gray-box .small {
+    color: #BFBFBF;
   }
 
   #body-wrap .ep-section .ep-close span:hover {
@@ -271,12 +297,21 @@
     cursor: pointer;
   }
 
-  #body-wrap .section .gh-link a span, 
-  #body-wrap .section .gh-link > span {
+  #body-wrap .section .gh-link a span,
+  #body-wrap .ep-section .ep-close {
     margin-top: 22px;
     font-family: "Montserrat-Bold";
     font-size: 16px;
     color: #666666;
+  }
+
+  #body-wrap .section .gh-link.ep-close {
+    margin-right: -25px;
+    margin-bottom: 0;
+  }
+
+  #body-wrap .section .gh-link a > span,
+  #body-wrap .ep-section .ep-close span {
     border-bottom: 2px dotted #666666;
   }
 
@@ -284,13 +319,9 @@
     margin-right: 6px;
   }
 
-  #body-wrap .section .gh-link.text-right {
-    margin-right: -25px;
-    margin-bottom: 0;
-  }
-
   #body-wrap .section .video {
     margin-bottom: 10px;
+    max-width: 500px;
   }
   
   footer {
@@ -298,9 +329,13 @@
     padding: 33px 0 180px;
   }
 
+  footer p {
+    font-family: "Montserrat-ExtraLight";
+  }
+
   footer .section {
     border-bottom: 2px dotted #666666;
-    padding: 13px 35px 13px;
+    padding: 13px 50px 13px;
     color: #666666;
   }
 
@@ -315,7 +350,7 @@
   footer .section h2 {
     font-size: 20px;
     color: #BFBFBF;
-    font-family: "Montserrat-Thin";
+    font-family: "Montserrat-ExtraLight";
     line-height: 140%;
     padding-bottom: 31px;
     letter-spacing: 0.5px;
@@ -342,7 +377,7 @@
     background-color: rgba(250, 250, 250, 0.1); 
     color: #FAFAFA; 
     border: none;
-    font-family: "Montserrat-Regular";
+    font-family: "Montserrat-Bold";
     font-size: 16px;
     padding: 32px 24px 30px;
     letter-spacing: 1px;
@@ -362,22 +397,112 @@
   
   /*Small devices (landscape phones, 576px and up)*/
   @media (min-width: 576px) {
-    
+    .section {
+      padding: 18px 10vw 29px;
+    }
   }
   
   /*Medium devices (tablets, 768px and up)*/
   @media (min-width: 768px) {
-    body {
+    .width-tester {
+      width: 768px;
+    }
+    #header h1 {
+      font-family: "Montserrat-Bold";
+      font-size: 88px;
+      line-height: 82px;
+    }
+    .logo {
+      max-width: 80px;
+    }
+    #header {
+      padding: 100px 10vw 77px;
+    }
+    #body-wrap .intro-section {
+      padding: 42px 10vw 43px;
+      font-family: "Montserrat-Light";
+      font-size: 24px;
+      line-height: 32px;
+    }
+    #body-wrap #season-select,
+    #body-wrap .section {
+      padding: 50px 10vw 62px;
+    }
+    #body-wrap #season-select button#season-btn {
+      font-family: "Montserrat-ExtraLight";
+      margin-bottom: 25px;
+    }
+    #body-wrap #season-select .season-status .in-progress, 
+    #body-wrap .ep-section .in-progress {
+      font-family: "Montserrat-SemiBold";
+    }
+    #body-wrap #season-select.section p {
+      font-family: "Montserrat-ExtraLight";
+      font-size: 18px;
+      line-height: 28px;
+    }
+    #body-wrap .section.ep-section .ep-top {
+      cursor: text;
+    }
+    #body-wrap .section.ep-section .ep-top p {
+      display: inline-block;
+    }
+    #body-wrap .section .ep-top .ep-checkmark {
+      display: none !important;
+    }
+    #body-wrap .section.ep-section .ep-top .ep-status,
+    #body-wrap .section .readmore,
+    #body-wrap .section .gh-link {
+      display: inline-block;
+    }
+    #body-wrap .section.ep-section .collapse.ep-desc.show p.ep-status-done,#body-wrap .section.ep-section .collapsing.ep-desc p.ep-status-done,
+    #body-wrap .section .gh-link.ep-close {
+      display: none;
+    }
+    #body-wrap .section.ep-section p.ep-status-done {
+      margin-top: -5px;
+      padding: 5px 8px 3px;
+    }
+    .ep-top {
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      display: flex;
+      align-items: flex-start;
+    }
+    #body-wrap .section .ep-number {
+      font-family: "Montserrat-ExtraLight";
+    }
+    #body-wrap .section .ep-title {
+      font-family: "Montserrat-SemiBold";
+    }
+    #body-wrap .ep-section p {
+      font-family: "Montserrat-Thin";
+      font-size: 20px;
+      line-height: 26px;
+    }
+    #body-wrap .section a {
+      font-family: "Montserrat-SemiBold";
+    }
+    #body-wrap .section .gray-box {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+    #body-wrap .section .gray-box p {
+      font-family: "Montserrat-ExtraLight";
+      font-size: 16px;
+    }
+    .gray-box p bold {
+      font-family: "Montserrat-SemiBold";
+    }
+    #body-wrap .section .gray-box button a {
+      font-size: 18px;
+    }
+    /* body {
       font-size: 18px;
     }
     #header {
       padding-bottom: 73px;
-    }
-    #header h1 {
-      font-size: 64px;
-    }
-    .logo {
-      padding: 2px 0 43px 0;
     }
     #body-wrap .section {
       padding: 29px 0 34px;
@@ -404,12 +529,21 @@
       font-size: 18px;
       padding: 32px 28px 30px;
       min-width: none;
-    }    
+    }     */
+
+    /* THE FOLLOWING RULES NEED TO BE AT THIS BREAKPOINT */
+    .season-status {
+      padding-top: 24px;
+    }
+    #body-wrap #season-select .dropdown,
+    #body-wrap #season-select .season-status {
+      display: inline-block;
+    }
   }
   
   /*Large devices (desktops, 992px and up)*/
   @media (min-width: 992px) {
-    body {
+    /* body {
       font-size: 18px;
     }
     #body-wrap .section h2 {
@@ -424,7 +558,7 @@
     }
     footer .btn-dark {
       font-size: 18px;
-    }
+    } */
   }
   
   @media (min-width: 1200px) {
