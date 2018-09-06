@@ -85,7 +85,7 @@
     background-color: #fafafa;
     border-bottom: none;
     font-size: 20px;
-    font-family: "Montserrat-Regular";
+    font-family: "Montserrat-ExtraLight";
     line-height: 26px;
     color: #666666;
   }
@@ -124,7 +124,7 @@
     -moz-border-radius: 0;
     border-radius: 2px;
     margin-bottom: 20px;
-    padding: 20px 27px;
+    padding: 18px 27px;
   }
 
   #body-wrap #season-select .dropdown-toggle::after {
@@ -138,7 +138,8 @@
   }
 
   #body-wrap #season-select .dropdown-menu {
-    width: 224px;
+    width: 241px;
+    padding: 0;
   }
 
   #body-wrap #season-select .dropdown-menu .dropdown-item {
@@ -147,48 +148,98 @@
     font-family: "Montserrat-Thin";
     font-size: 20px;
     border: none;
+    padding: 7px 1.5rem;
   }
 
-  #body-wrap .in-progress {
+  #body-wrap #season-select .dropdown-menu .dropdown-item:first-child {
+    padding-top: 15px;
+  }
+
+  #body-wrap #season-select .dropdown-menu .dropdown-item:last-child {
+    padding-bottom: 15px;
+  }
+
+  #body-wrap #season-select .dropdown-menu .dropdown-item:hover {
+    cursor: pointer;
+    background-color: #fafafa;
+  }
+
+  #body-wrap .in-progress,
+  #body-wrap .doing {
     font-size: 16px;
     font-family: "Montserrat-Bold";
     background-color: #EFD96F;
     color: #FAFAFA !important;
-    padding: 3px 12px 5px;
+    padding: 4px 12px;
     border: none;
     margin-bottom: 11px;
+    /* display: inline-block; */
+  }
+
+  #body-wrap #season-select .in-progress {
     display: inline-block !important;
-}
+  }
+
+  #body-wrap .section.ep-section p.doing {
+    font-family: "Montserrat-Bold";
+    font-size: 12px;
+    padding: 4px 12px;
+    margin-top: 7px;
+  }
 
   #body-wrap .ep-section {
     font-family: "Montserrat-Light";
   }
 
-  #body-wrap .section.ep-section p {
-    color: #666666;
-    margin-right: 26px;
+  .collapse-toggle {
+    position: absolute;
+    top: 20px;
+    left: 26px;
+    cursor: pointer;
+    transition: transform 0.5s;
   }
 
-  #body-wrap .section.ep-section .ep-desc > p:nth-child(2),
-  #body-wrap .section.ep-section.ep-in-progress .ep-desc > p:first-child {
-    margin-top: 30px;
+  .collapse-toggle i {
+    font-size: 24px;
+    color: #666666;
+  }
+
+  .rotate {
+    transform: rotate(90deg); 
+    transition: transform 0.5s;
+  }
+
+  #body-wrap .section.ep-section p {
+    color: #333333;
+    transition: color 0.5s;
+  }
+
+  #body-wrap .section.ep-section p.light {
+    color: #BFBFBF;
+    transition: color 0.5s;
+  }
+
+  #body-wrap .section.ep-section .ep-desc > p:first-child {
+    margin-top: 14px;
   }
 
   #body-wrap .section.ep-section .ep-top {
     margin-top: 0;
-    cursor: pointer;
   }
 
   #body-wrap .section.ep-section .ep-top p {
     margin-bottom: 0;
   }
 
-  #body-wrap .section.ep-section .ep-top[aria-expanded="false"] p {
-    color: #BFBFBF;
-    margin-bottom: 0;
+  #body-wrap .section.ep-section .ep-top p:first-child, #body-wrap .section.ep-section .ep-top p:nth-child(2) {
+    display: inline-block;
   }
 
-  #body-wrap .section.ep-section .ep-top .ep-status {
+  #body-wrap .section.ep-section .ep-top p:nth-child(2) {
+    float: right;
+  }
+
+  #body-wrap .section.ep-section .ep-top p:last-child {
     display: none;
   }
 
@@ -214,10 +265,10 @@
   #body-wrap .section.ep-section p.ep-status-done,
   #body-wrap .section.ep-section p.ep-status-todo {
     font-family: "Montserrat-Bold";
-    font-size: 16px;
+    font-size: 12px;
     color: #65D890 !important;
     border: 2px solid #65D890;
-    padding: 4px 8px;
+    padding: 2px 8px;
     margin-top: 7px;
     display: inline-block;
   }
@@ -225,18 +276,18 @@
   #body-wrap .section.ep-section p.ep-status-todo {
     color: #BFBFBF !important;
     border: 2px solid #BFBFBF;
-}
+  }
 
-  #body-wrap .section .ep-top .ep-checkmark {
+  /* #body-wrap .section .ep-top .ep-checkmark {
     position: absolute;
     left: 340px;
     bottom: 8px;
     color: #65D890;
-  }
+  } */
 
-  #body-wrap .section .ep-top[aria-expanded="true"] .ep-checkmark {
+  /* #body-wrap .section .ep-top[aria-expanded="true"] .ep-checkmark {
     display: none;
-  }
+  } */
 
   #body-wrap .section .ep-icon img {
     max-width: 100%;
@@ -404,6 +455,9 @@
     .width-tester {
       width: 768px;
     }
+    .collapse-toggle {
+      display: none;
+    }
     #header h1 {
       font-family: "Montserrat-Bold";
       font-size: 88px;
@@ -441,38 +495,31 @@
     #body-wrap .section.ep-section .ep-top {
       cursor: text;
     }
-    #body-wrap .section.ep-section .ep-top p {
+    #body-wrap .section.ep-section .ep-top p:first-child,
+    #body-wrap .section.ep-section .ep-top p:nth-child(2) {
       display: inline-block;
     }
-    #body-wrap .section .ep-top .ep-checkmark {
-      display: none !important;
-    }
-    #body-wrap .section.ep-section .ep-top .ep-status,
     #body-wrap .section .readmore,
-    #body-wrap .section .gh-link {
+    #body-wrap .section .gh-link:not(.ep-close) {
       display: inline-block;
     }
-    #body-wrap .section.ep-section .collapse.ep-desc.show p.ep-status-done,#body-wrap .section.ep-section .collapsing.ep-desc p.ep-status-done,
-    #body-wrap .section .gh-link.ep-close,
-    #body-wrap .section.ep-section .collapse.ep-desc.show p.ep-status-todo {
-      display: none;
+    #body-wrap .section .readmore {
+      margin-right: 21px;
     }
     #body-wrap .section.ep-section p.ep-status-done,
     #body-wrap .section.ep-section p.ep-status-todo {
       margin-top: -5px;
       padding: 5px 8px 3px;
     }
-    .ep-top {
-      display: -webkit-flex;
-      -webkit-align-items: center;
-      display: flex;
-      align-items: flex-start;
+    #body-wrap .section.ep-section p.doing {
+      margin-top: -5px;
     }
-    #body-wrap .section .ep-number {
-      font-family: "Montserrat-ExtraLight";
+    #body-wrap .section.ep-section p.ep-status {
+      font-size: 16px;
     }
     #body-wrap .section .ep-title {
       font-family: "Montserrat-SemiBold";
+      margin-top: 5px;
     }
     #body-wrap .ep-section p {
       font-family: "Montserrat-Thin";
@@ -497,17 +544,39 @@
     #body-wrap .section .gray-box button a {
       font-size: 18px;
     }
+    footer .section p a {
+      font-family: "Montserrat-SemiBold";
+    }
 
     /* THE FOLLOWING RULES NEED TO BE AT THIS BREAKPOINT */
     #body-wrap #season-select .dropdown,
     #body-wrap #season-select .season-status {
       display: inline-block;
     }
+    #body-wrap #season-select .season-status span {
+      margin-top: -15px;
+      vertical-align: top;
+    }
   }
   
   /*Large devices (desktops, 992px and up)*/
   @media (min-width: 992px) {
-    
+    #body-wrap .section.ep-section .ep-top p:last-child {
+      display: inline-block;
+      margin-top: -5px;
+    }
+    #body-wrap .section.ep-section .ep-top p:nth-child(2)  {
+      display: none !important;
+    }
+    .ep-top {
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      display: flex;
+      align-items: flex-start;
+    }
+    #body-wrap .section .ep-title {
+      margin-top: 0;
+    }
   }
   
   @media (min-width: 1200px) {

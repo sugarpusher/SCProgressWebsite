@@ -60,15 +60,15 @@
               Season 1
               <i class="fa fa-angle-down" aria-hidden="true"></i>
             </button>
-            <div class="dropdown-menu" aria-labelledby="season-btn">
+            <div class="dropdown-menu" aria-labelledby="season-btn" id="season-drop">
               <span class="dropdown-item disabled">Season 2</span>
               <span class="dropdown-item disabled">Season 3</span>
             </div>
           </div>
           <div class="season-status">
-            <p class="in-progress">
-              In progress
-            </p>
+            <span class="in-progress">
+              Doing
+            </span>
           </div>
           <p>In Season 1 we meet Frank. Frank is a new face in Swarm City, and he is eager to use the DApp's functionality to find a service provider to help him complete a task. His actions and interactions show us the vast possibilities that abound in Swarm City. </p>
           <p>Once Season 1 is complete, users like Frank will be able to post, answer, and complete a request in Swarm City, earn Swarm Tokens and reputation, and resolve any unfortunate conflicts that arise. </p>
@@ -76,23 +76,25 @@
           <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see <span class="d-none d-md-inline">High Level Roadmap</span> on Github</span></a></p>
         </div>
 
-        <!-- DONE EPISODE SECTION START -->
+        <!-- EPISODE SECTION START -->
 
-        <div class="section ep-section done">
+        <div class="section ep-section done card" id="s01e01">
+          <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e01" aria-expanded="false" role="button">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
           <div class="row">
-            <div class="col-md-3 collapse s01e01 ep-icon">
+            <div class="col-md-3 collapse s01e01 ep-icon" data-parent="#body-wrap">
               <img src="images/icon_s01e01.png" class="">
             </div>
             <div class="col-md-9">
-              <div data-toggle="collapse" data-target=".collapse.s01e01" aria-expanded="false" class="ep-top">
+              <div class="ep-top">
                 <p class="ep-number">S01E01</p> 
+                <p class="ep-status ep-status-done">Done! <i class="fa fa-check" aria-hidden="true"></i></p>
                 <p class="ep-title">First Request</p> 
                 <p class="ep-status ep-status-done">Done! <i class="fa fa-check" aria-hidden="true"></i></p>
-                <div class="ep-checkmark"><img src="images/ep-checkmark-green.png"/></div>
               </div>
               
-              <div class="collapse s01e01 ep-desc">
-                <p class="ep-status ep-status-done">Done! <i class="fa fa-check" aria-hidden="true"></i></p>
+              <div class="collapse s01e01 ep-desc" data-parent="#body-wrap">
                 <p>In episode 1, Frank is really excited to start using Swarm City. Whenever he gets excited by something, Frank throws himself whole hog into it. And so without delay he creates and posts his first request. Frank would like someone to translate his "Decentralise Now!" manifesto in exchange for 20 SWT. </p>
 
                   <div class="collapse ep-more" id="s01e01-more">
@@ -109,12 +111,12 @@
                     <a class="more" data-toggle="collapse" href="#s01e01-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                     read more</a>
                   </p>
-                  <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p> -->
+                  <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/3"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p>
 
                   
               </div>
 
-              <div class="collapse s01e01 ep-video">
+              <div class="collapse s01e01 ep-video" data-parent="#body-wrap">
                 <div class="video">
                     <div class="embed-responsive embed-responsive-16by9">
                       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -127,30 +129,32 @@
                   <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                 </div>
               </div>
-              <p data-toggle="collapse" data-target=".s01e01" aria-expanded="false" class="gh-link text-right ep-close collapse s01e01"><span>close episode</span></p>
+              <p data-toggle="collapse" data-target=".s01e01" aria-expanded="false" class="gh-link text-right ep-close collapse s01e01" data-parent="#body-wrap"><span>close episode</span></p>
             </div>
           </div>
         </div>
 
         <!-- DONE EPISODE SECTION END -->
 
-        <!-- IN PROGRESS EPISODE SECTION START -->
+        <!-- EPISODE SECTION START -->
 
-        <div class="section ep-section ep-in-progress">
+        <div class="section ep-section ep-in-progress card" id="s01e02">
+            <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e02" aria-expanded="false" role="button">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="row">
-              <div class="col-md-3 collapse s01e02 ep-icon">
+              <div class="col-md-3 collapse s01e02 ep-icon" data-parent="#body-wrap">
                 <img src="images/icon_s01e02.png" class="">
               </div>
               <div class="col-md-9">
-                <div data-toggle="collapse" data-target=".collapse.s01e02" aria-expanded="false" class="ep-top">
+                <div class="ep-top">
                   <p class="ep-number">S01E02</p> 
+                  <p class="ep-status doing">Doing</p>
                   <p class="ep-title">Request Replies</p> 
-                  <p class="ep-status in-progress">In progress</p>
-                  <!-- <div class="ep-checkmark"><img src="images/ep-checkmark-green.png"/></div> -->
+                  <p class="ep-status doing">Doing</p>
                 </div>
                 
-                <div class="collapse s01e02 ep-desc">
-                  <!-- <p class="ep-status in-progress">In progress</p> -->
+                <div class="collapse s01e02 ep-desc" data-parent="#body-wrap">
                   <p>In episode 2, two people reply to Frank's request. Alice sees Frank's request on Facebook. She taps it, and gets transported by way of the internet to swarm.city. Here Alice can see the details of the request, and she decides to reply.</p>
   
                     <div class="collapse ep-more" id="s01e02-more">
@@ -165,12 +169,12 @@
                       <a class="more" data-toggle="collapse" href="#s01e02-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                       read more</a>
                     </p>
-                    <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E02 on Github</span></a></p> -->
+                    <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/4"><img src="images/icon_github.png"><span>see S01E02 on Github</span></a></p>
   
                     
                 </div>
   
-                <div class="collapse s01e02 ep-video">
+                <div class="collapse s01e02 ep-video" data-parent="#body-wrap">
                   <div class="video">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -183,30 +187,32 @@
                     <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                   </div>
                 </div>
-                <p data-toggle="collapse" data-target=".s01e02" aria-expanded="false" class="gh-link text-right ep-close collapse s01e02"><span>close episode</span></p>
+                <p data-toggle="collapse" data-target=".s01e02" aria-expanded="false" class="gh-link text-right ep-close collapse s01e02" data-parent="#body-wrap"><span>close episode</span></p>
               </div>
             </div>
           </div>
   
-          <!-- IN PROGRESS EPISODE SECTION END -->
+          <!-- EPISODE SECTION END -->
 
-          <!-- TO DO EPISODE SECTION START -->
+          <!-- EPISODE SECTION START -->
 
-          <div class="section ep-section ep-todo">
+          <div class="section ep-section ep-todo card" id="s01e03">
+            <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e03" aria-expanded="false" role="button">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="row">
-              <div class="col-md-3 collapse s01e03 ep-icon">
+              <div class="col-md-3 collapse s01e03 ep-icon" data-parent="#body-wrap">
                 <img src="images/icon_s01e03.png" class="">
               </div>
               <div class="col-md-9">
-                <div data-toggle="collapse" data-target=".collapse.s01e03" aria-expanded="false" class="ep-top">
+                <div class="ep-top">
                   <p class="ep-number">S01E03</p> 
+                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
                   <p class="ep-title">The Burden of Choice</p> 
                   <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
-                  <div class="ep-checkmark"><img src="images/ep-checkmark-gray.png"/></div>
                 </div>
                 
-                <div class="collapse s01e03 ep-desc">
-                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
+                <div class="collapse s01e03 ep-desc" data-parent="#body-wrap">
                   <p>In episode 3, Frank has to decide who he wants to choose as a provider for his request. Frank gets to know the reputation of the repliers, Alice and Tom. Alice's reputation is sketchy, so he chooses Tom to become the Provider.</p>
   
                     <div class="collapse ep-more" id="s01e03-more">
@@ -219,12 +225,12 @@
                       <a class="more" data-toggle="collapse" href="#s01e03-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                       read more</a>
                     </p>
-                    <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p> -->
+                    <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/5"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p>
   
                     
                 </div>
   
-                <div class="collapse s01e03 ep-video">
+                <div class="collapse s01e03 ep-video" data-parent="#body-wrap">
                   <div class="video">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -237,30 +243,32 @@
                     <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                   </div>
                 </div>
-                <p data-toggle="collapse" data-target=".s01e03" aria-expanded="false" class="gh-link text-right ep-close collapse s01e03"><span>close episode</span></p>
+                <p data-toggle="collapse" data-target=".s01e03" aria-expanded="false" class="gh-link text-right ep-close collapse s01e03" data-parent="#body-wrap"><span>close episode</span></p>
               </div>
             </div>
           </div>
   
-          <!-- TO DO EPISODE SECTION END -->
+          <!-- EPISODE SECTION END -->
 
-          <!-- TO DO EPISODE SECTION START -->
+          <!-- EPISODE SECTION START -->
 
-          <div class="section ep-section ep-todo">
+          <div class="section ep-section ep-todo card" id="s01e04">
+            <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e04" aria-expanded="false" role="button">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="row">
-              <div class="col-md-3 collapse s01e04 ep-icon">
+              <div class="col-md-3 collapse s01e04 ep-icon" data-parent="#body-wrap">
                 <img src="images/icon_s01e04.png" class="">
               </div>
               <div class="col-md-9">
-                <div data-toggle="collapse" data-target=".collapse.s01e04" aria-expanded="false" class="ep-top">
+                <div class="ep-top">
                   <p class="ep-number">S01E04</p> 
+                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
                   <p class="ep-title">The Successful Deal</p> 
                   <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
-                  <div class="ep-checkmark"><img src="images/ep-checkmark-gray.png"/></div>
                 </div>
                 
-                <div class="collapse s01e04 ep-desc">
-                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
+                <div class="collapse s01e04 ep-desc" data-parent="#body-wrap">
                   <p>In episode 4, Frank and Tom successfully complete a deal. When a deal is successfully completed both users gain reputation. Frank can view his new reputation, while Tom verifies that he received his SWT.</p>
   
                     <div class="collapse ep-more" id="s01e04-more">
@@ -271,12 +279,12 @@
                       <a class="more" data-toggle="collapse" href="#s01e04-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                       read more</a>
                     </p>
-                    <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p> -->
+                    <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/7"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p>
   
                     
                 </div>
   
-                <div class="collapse s01e04 ep-video">
+                <div class="collapse s01e04 ep-video" data-parent="#body-wrap">
                   <div class="video">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -289,30 +297,32 @@
                     <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                   </div>
                 </div>
-                <p data-toggle="collapse" data-target=".s01e04" aria-expanded="false" class="gh-link text-right ep-close collapse s01e04"><span>close episode</span></p>
+                <p data-toggle="collapse" data-target=".s01e04" aria-expanded="false" class="gh-link text-right ep-close collapse s01e04" data-parent="#body-wrap"><span>close episode</span></p>
               </div>
             </div>
           </div>
   
-          <!-- TO DO EPISODE SECTION END -->
+          <!-- EPISODE SECTION END -->
 
-          <!-- TO DO EPISODE SECTION START -->
+          <!-- EPISODE SECTION START -->
 
-           <div class="section ep-section ep-todo">
+           <div class="section ep-section ep-todo card" id="s01e05">
+            <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e05" aria-expanded="false" role="button">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="row">
-              <div class="col-md-3 collapse s01e05 ep-icon">
+              <div class="col-md-3 collapse s01e05 ep-icon" data-parent="#body-wrap">
                 <img src="images/icon_s01e05.png" class="">
               </div>
               <div class="col-md-9">
-                <div data-toggle="collapse" data-target=".collapse.s01e05" aria-expanded="false" class="ep-top">
+                <div class="ep-top">
                   <p class="ep-number">S01E05</p> 
+                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
                   <p class="ep-title">Going Sour</p> 
                   <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
-                  <div class="ep-checkmark"><img src="images/ep-checkmark-gray.png"/></div>
                 </div>
                 
-                <div class="collapse s01e05 ep-desc">
-                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
+                <div class="collapse s01e05 ep-desc" data-parent="#body-wrap">
                   <p>In episode 5 Tom tries to make up his mind about where to post his first request. There are so many possibilities to choose from! In order to decide, Tom checks out the information display for several different hashtags to see their conflict/success ratio, and provider/seeker ratio.</p>
   
                     <div class="collapse ep-more" id="s01e05-more">
@@ -326,11 +336,11 @@
                       <a class="more" data-toggle="collapse" href="#s01e05-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                       read more</a>
                     </p>
-                    <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p> -->
+                    <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/8"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p>
   
                 </div>
   
-                <div class="collapse s01e05 ep-video">
+                <div class="collapse s01e05 ep-video" data-parent="#body-wrap">
                   <div class="video">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -343,30 +353,32 @@
                     <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                   </div>
                 </div>
-                <p data-toggle="collapse" data-target=".s01e05" aria-expanded="false" class="gh-link text-right ep-close collapse s01e05"><span>close episode</span></p>
+                <p data-toggle="collapse" data-target=".s01e05" aria-expanded="false" class="gh-link text-right ep-close collapse s01e05" data-parent="#body-wrap"><span>close episode</span></p>
               </div>
             </div>
           </div>
   
-          <!-- TO DO EPISODE SECTION END -->
+          <!-- EPISODE SECTION END -->
 
-          <!-- TO DO EPISODE SECTION START -->
+          <!-- EPISODE SECTION START -->
 
-          <div class="section ep-section ep-todo">
+          <div class="section ep-section ep-todo card" id="s01e06">
+            <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e06" aria-expanded="false" role="button">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="row">
-              <div class="col-md-3 collapse s01e06 ep-icon">
+              <div class="col-md-3 collapse s01e06 ep-icon" data-parent="#body-wrap">
                 <img src="images/icon_s01e06.png" class="">
               </div>
               <div class="col-md-9">
-                <div data-toggle="collapse" data-target=".collapse.s01e06" aria-expanded="false" class="ep-top">
+                <div class="ep-top">
                   <p class="ep-number">S01E06</p> 
+                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
                   <p class="ep-title">Finding Peace</p> 
                   <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
-                  <div class="ep-checkmark"><img src="images/ep-checkmark-gray.png"/></div>
                 </div>
                 
-                <div class="collapse s01e06 ep-desc">
-                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
+                <div class="collapse s01e06 ep-desc" data-parent="#body-wrap">
                   <p>In episode 6 we meet Crystal, the Hashtag maintainer. She is responsible for resolving the conflict between Tom and Brenda.</p>
   
                     <div class="collapse ep-more" id="s01e06-more">
@@ -378,11 +390,11 @@
                       <a class="more" data-toggle="collapse" href="#s01e06-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                       read more</a>
                     </p>
-                    <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p> -->
+                    <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/9"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p>
   
                 </div>
   
-                <div class="collapse s01e06 ep-video">
+                <div class="collapse s01e06 ep-video" data-parent="#body-wrap">
                   <div class="video">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -395,30 +407,32 @@
                     <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                   </div>
                 </div>
-                <p data-toggle="collapse" data-target=".s01e06" aria-expanded="false" class="gh-link text-right ep-close collapse s01e06"><span>close episode</span></p>
+                <p data-toggle="collapse" data-target=".s01e06" aria-expanded="false" class="gh-link text-right ep-close collapse s01e06" data-parent="#body-wrap"><span>close episode</span></p>
               </div>
             </div>
           </div>
   
-          <!-- TO DO EPISODE SECTION END -->
+          <!-- EPISODE SECTION END -->
 
-          <!-- TO DO EPISODE SECTION START -->
+          <!-- EPISODE SECTION START -->
 
-          <div class="section ep-section ep-todo">
+          <div class="section ep-section ep-todo card" id="s01e07">
+            <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e07" aria-expanded="false" role="button">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="row">
-              <div class="col-md-3 collapse s01e07 ep-icon">
+              <div class="col-md-3 collapse s01e07 ep-icon" data-parent="#body-wrap">
                 <img src="images/icon_s01e07.png" class="">
               </div>
               <div class="col-md-9">
-                <div data-toggle="collapse" data-target=".collapse.s01e07" aria-expanded="false" class="ep-top">
+                <div class="ep-top">
                   <p class="ep-number">S01E07</p> 
+                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
                   <p class="ep-title">Searching New Horizons</p> 
                   <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
-                  <div class="ep-checkmark"><img src="images/ep-checkmark-gray.png"/></div>
                 </div>
                 
-                <div class="collapse s01e07 ep-desc">
-                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
+                <div class="collapse s01e07 ep-desc" data-parent="#body-wrap">
                   <p>In episode 7, Brenda tries to reply to a request on a different hashtag.</p>
   
                     <div class="collapse ep-more" id="s01e07-more">
@@ -431,11 +445,11 @@
                       <a class="more" data-toggle="collapse" href="#s01e07-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                       read more</a>
                     </p>
-                    <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p> -->
+                    <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/10"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p>
   
                 </div>
   
-                <div class="collapse s01e07 ep-video">
+                <div class="collapse s01e07 ep-video" data-parent="#body-wrap">
                   <div class="video">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -448,30 +462,32 @@
                     <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                   </div>
                 </div>
-                <p data-toggle="collapse" data-target=".s01e07" aria-expanded="false" class="gh-link text-right ep-close collapse s01e07"><span>close episode</span></p>
+                <p data-toggle="collapse" data-target=".s01e07" aria-expanded="false" class="gh-link text-right ep-close collapse s01e07" data-parent="#body-wrap"><span>close episode</span></p>
               </div>
             </div>
           </div>
   
-          <!-- TO DO EPISODE SECTION END -->
+          <!-- EPISODE SECTION END -->
 
-          <!-- TO DO EPISODE SECTION START -->
+          <!-- EPISODE SECTION START -->
 
-          <div class="section ep-section ep-todo">
+          <div class="section ep-section ep-todo card" id="s01e08">
+            <div class="collapse-toggle" data-toggle="collapse" data-target=".collapse.s01e08" aria-expanded="false" role="button">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
             <div class="row">
-              <div class="col-md-3 collapse s01e08 ep-icon">
+              <div class="col-md-3 collapse s01e08 ep-icon" data-parent="#body-wrap">
                 <img src="images/icon_s01e08.png" class="">
               </div>
               <div class="col-md-9">
-                <div data-toggle="collapse" data-target=".collapse.s01e08" aria-expanded="false" class="ep-top">
+                <div class="ep-top">
                   <p class="ep-number">S01E08</p> 
+                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
                   <p class="ep-title">Bad Luck Gary</p> 
                   <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
-                  <div class="ep-checkmark"><img src="images/ep-checkmark-gray.png"/></div>
                 </div>
                 
-                <div class="collapse s01e08 ep-desc">
-                  <p class="ep-status ep-status-todo">To do <i class="fa fa-check" aria-hidden="true"></i></p>
+                <div class="collapse s01e08 ep-desc" data-parent="#body-wrap">
                   <p>In episode 8, Gary has no luck with his deal, so he just gives up.</p>
   
                     <div class="collapse ep-more" id="s01e08-more">
@@ -482,11 +498,11 @@
                       <a class="more" data-toggle="collapse" href="#s01e08-more" role="button" aria-expanded="false" aria-controls="what-answer" moretext="read more">
                       read more</a>
                     </p>
-                    <!-- <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p> -->
+                    <p class="gh-link"><a href="https://github.com/swarmcity/SwarmCityConcept/milestone/11"><img src="images/icon_github.png"><span>see S01E01 on Github</span></a></p>
   
                 </div>
   
-                <div class="collapse s01e08 ep-video">
+                <div class="collapse s01e08 ep-video" data-parent="#body-wrap">
                   <div class="video">
                       <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MMkKu43_cjw" allowfullscreen></iframe>
@@ -499,12 +515,12 @@
                     <button class="btn visit"><a href="#">visit dev.swarm.city</a></button>
                   </div>
                 </div>
-                <p data-toggle="collapse" data-target=".s01e08" aria-expanded="false" class="gh-link text-right ep-close collapse s01e08"><span>close episode</span></p>
+                <p data-toggle="collapse" data-target=".s01e08" aria-expanded="false" class="gh-link text-right ep-close collapse s01e08" data-parent="#body-wrap"><span>close episode</span></p>
               </div>
             </div>
           </div>
   
-          <!-- TO DO EPISODE SECTION END -->
+          <!-- EPISODE SECTION END -->
 
       </div>        
     <!--BODY END-->

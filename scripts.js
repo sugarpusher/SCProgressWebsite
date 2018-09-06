@@ -4,24 +4,18 @@
 
 function epCollapse(){
   if ($(".width-tester").css("width") == "768px") {
-    if(!$(".ep-section.done .collapse.ep-desc" ).hasClass( "show" )){
-
-      $(".ep-top").attr({
-        "data-toggle" : "none"
-      });
-      $("#body-wrap .section.ep-section .ep-top").attr({
-        "aria-expanded" : "true"
-      });        
+    if(!$(".collapse.ep-desc").hasClass( "show" )){ 
       $('.ep-icon, .ep-desc, .ep-video').addClass("show");
-      // $(".ep-section .collapse.ep-icon").addClass("show");        
-      // $(".ep-section .collapse.ep-desc").addClass("show");
-      // $(".ep-section .collapse.ep-video").addClass("show");
     }
-  } 
+  } else {
+    if($(".collapse.ep-desc" ).hasClass( "show" )){ 
+      $('.ep-icon, .ep-desc, .ep-video, .ep-close').removeClass("show");
+    }
+  }
 }
 
 // ===================================================
-// CHANGE LINK TEXT WHEN CLICKED (SHOW MORE/SHOW LESS)
+// CHANGE "more" LINK TEXT WHEN CLICKED (SHOW MORE/SHOW LESS)
 // ===================================================
 
 function changeLink(){
@@ -36,19 +30,28 @@ function changeLink(){
   });
 }
 
-function checkmark(){  
-  $( ".ep-top" ).click(function() {
-    $(".ep-checkmark").toggle();
-  });
-  $( ".ep-close" ).click(function() {
-    $(".ep-checkmark").toggle();
+// ===================================================
+// ROTATE COLLAPSE ARROW AND CHANGE TITLE COLOR
+// ===================================================
+
+function rotateArrow(){
+  $(".collapse-toggle, .ep-close").click(function () {
+    $(".section .ep-top p").toggleClass("light");
+    var thisSection = $(this).closest("[id]").prop("id");
+    console.log(thisSection);
+    $("#" + thisSection + " .collapse-toggle").toggleClass("rotate");
+    $("#" + thisSection + " .ep-top p").toggleClass("light");
   });
 }
+
+// ===================================================
+// FUNCTION CALLS
+// ===================================================
 
 $(document).ready(function(){    
   changeLink();
   epCollapse();  
-  checkmark();
+  rotateArrow();
 });  
 
 $(window).on('resize', function(){
