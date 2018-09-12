@@ -31,18 +31,31 @@ function changeLink(){
 }
 
 // ===================================================
-// ROTATE COLLAPSE ARROW AND CHANGE TITLE COLOR - DOUBLE CHECK THIS!!
+// ROTATE COLLAPSE ARROW AND CHANGE TITLE COLOR
 // ===================================================
 
 function rotateArrow(){
   $(".collapse-toggle, .ep-close").click(function () {
-    $(".section .ep-top p").toggleClass("light");
     var thisSection = $(this).closest("[id]").prop("id");
-    console.log(thisSection);
     $("#" + thisSection + " .collapse-toggle").toggleClass("rotate");
     $(".collapse-toggle").not(this).removeClass("rotate");
-    $("#" + thisSection + " .ep-top p").toggleClass("light");
-    $(".collapse-toggle").not(this).removeClass("light");
+  });
+}
+
+
+
+function changeColor(){
+  $(".collapse-toggle").click(function () {
+    $(".section .ep-top p").addClass("light");
+    var thisSection = $(this).closest("[id]").prop("id");
+    $("#" + thisSection + " .ep-top p").removeClass("light");
+  });
+  $(".ep-close").click(function () {
+    $(".section .ep-top p").removeClass("light");
+    var $card = $(this).closest('.card');
+    $('html,body').animate({
+      scrollTop: $card.offset().top
+    }, 500);
   });
 }
 
@@ -54,8 +67,9 @@ $(document).ready(function(){
   changeLink();
   epCollapse();  
   rotateArrow();
+  changeColor();
 
-  $('.collapse').on('shown.bs.collapse', function(e) {
+  $('.ep-icon.collapse').on('shown.bs.collapse.ep-icon', function(e) {
     var $card = $(this).closest('.card');
     $('html,body').animate({
       scrollTop: $card.offset().top

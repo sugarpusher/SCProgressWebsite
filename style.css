@@ -193,10 +193,12 @@
 
   .collapse-toggle {
     position: absolute;
-    top: 20px;
-    left: 26px;
+    top: 5px;
+    left: 11px;
     cursor: pointer;
     transition: transform 0.5s;
+    padding: 15px;
+    z-index: 100;
   }
 
   .collapse-toggle i {
