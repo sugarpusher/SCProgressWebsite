@@ -31,7 +31,7 @@ function changeLink(){
 }
 
 // ===================================================
-// ROTATE COLLAPSE ARROW AND CHANGE TITLE COLOR
+// ROTATE COLLAPSE ARROW
 // ===================================================
 
 function rotateArrow(){
@@ -42,14 +42,18 @@ function rotateArrow(){
   });
 }
 
-
+// ===================================================
+// CHANGE TITLE COLOR AND SCROLL ON CLOSE
+// ===================================================
 
 function changeColor(){
+  // CHANGE COLOR
   $(".collapse-toggle").click(function () {
     $(".section .ep-top p").addClass("light");
     var thisSection = $(this).closest("[id]").prop("id");
     $("#" + thisSection + " .ep-top p").removeClass("light");
   });
+  // SCROLL ON CLOSE
   $(".ep-close").click(function () {
     $(".section .ep-top p").removeClass("light");
     var $card = $(this).closest('.card');
