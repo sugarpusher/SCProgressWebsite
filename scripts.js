@@ -31,7 +31,7 @@ function changeLink(){
 }
 
 // ===================================================
-// ROTATE COLLAPSE ARROW AND CHANGE TITLE COLOR
+// ROTATE COLLAPSE ARROW AND CHANGE TITLE COLOR - DOUBLE CHECK THIS!!
 // ===================================================
 
 function rotateArrow(){
@@ -40,7 +40,9 @@ function rotateArrow(){
     var thisSection = $(this).closest("[id]").prop("id");
     console.log(thisSection);
     $("#" + thisSection + " .collapse-toggle").toggleClass("rotate");
+    $(".collapse-toggle").not(this).removeClass("rotate");
     $("#" + thisSection + " .ep-top p").toggleClass("light");
+    $(".collapse-toggle").not(this).removeClass("light");
   });
 }
 
@@ -52,8 +54,16 @@ $(document).ready(function(){
   changeLink();
   epCollapse();  
   rotateArrow();
+
+  $('.collapse').on('shown.bs.collapse', function(e) {
+    var $card = $(this).closest('.card');
+    $('html,body').animate({
+      scrollTop: $card.offset().top
+    }, 500);
+  });
+  
 });  
 
-$(window).on('resize', function(){
-  epCollapse();
-});
+// $(window).on('resize', function(){
+//   epCollapse();
+// });
