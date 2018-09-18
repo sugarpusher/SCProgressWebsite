@@ -49,14 +49,12 @@
   
   #header {
     background-color: #24B1FF;
-    padding: 65px 50px 24px;
+    padding: 1px 50px 24px;
   }
 
   .navbar {
     padding: 25px 34px 9px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    background-color: #24B1FF;
   }
 
   .navbar-nav {
@@ -498,9 +496,6 @@
   
   /*Small devices (landscape phones, 576px and up)*/
   @media (min-width: 576px) {
-    .navbar {
-      padding-bottom: 33px;
-    }
     .section {
       padding: 18px 10vw 29px;
     }
@@ -511,6 +506,9 @@
     /* .width-tester {
       width: 768px;
     } */
+    .navbar {
+      padding-bottom: 33px;
+    }
     .collapse-toggle {
       display: none;
     }
@@ -532,7 +530,7 @@
       max-width: 80px;
     }
     #header {
-      padding: 100px 10vw 77px;
+      padding: 12px 10vw 77px;
     }
     #body-wrap .intro-section {
       padding: 42px 10vw 43px;
@@ -637,6 +635,9 @@
     }
     .nav-link {
       padding-top: 5px;
+    }
+    #header {
+      padding-top: 16px;
     }
     #body-wrap .section.ep-section .ep-top p:last-child {
       display: inline-block;
